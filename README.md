@@ -43,12 +43,17 @@ cd timer-app
 npm install
 ```
 
-4. Start the development server
+4. Run the test cases
+```
+npm test
+```
+
+5. Start the development server
 ```
 npm start
 ```
 
-5. Open your browser and navigate to [http://localhost:3000](http://localhost:3000)
+6. Open your browser and navigate to [http://localhost:3000](http://localhost:3000)
 
 ## Configuration
 

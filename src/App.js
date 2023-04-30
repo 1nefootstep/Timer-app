@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import ConfigToggle from "./ConfigToggle";
+import ConfigToggle from "./components/ConfigToggle";
 import timerConfigs from "./timerConfigs";
-import TimerOrSeparator from "./TimerOrSeparator";
+import TimerOrSeparator from "./components/TimerOrSeparator";
 
 function App() {
   const [activeConfig, setActiveConfig] = useState(timerConfigs[0]);
@@ -27,7 +27,9 @@ function App() {
       <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
         {activeConfig.timers.map((timer, index) => (
           <TimerOrSeparator
-            id={activeConfig.id}
+            key={`${activeConfig.id}_${
+              timer.title ? timer.title : `separator-${index}`
+            }`}
             index={index}
             isSeparator={timer.isSeparator}
             duration={timer.duration}

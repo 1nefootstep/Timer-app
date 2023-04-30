@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import useTimer from "./hook/useTimer";
+import useTimer from "../hook/useTimer";
 
 const formatTime = (timeInSeconds) => {
   const minutes = Math.floor(timeInSeconds / 60);
@@ -21,7 +21,6 @@ const Timer = ({ duration, title, nullableColorChangeThreshold }) => {
 
   const [timerColor, setTimerColor] = useState("text-green-500");
 
-  console.log(`duration: ${duration}`);
   const { seconds, start, reset, running, stop } = useTimer({
     initialSeconds: duration,
     initiallyRunning: false,

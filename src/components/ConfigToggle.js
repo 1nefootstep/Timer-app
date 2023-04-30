@@ -1,5 +1,5 @@
 import { useState } from "react";
-import timerConfigs from "./timerConfigs";
+import timerConfigs from "../timerConfigs";
 
 const ConfigToggle = ({ onConfigChange }) => {
   const [selectedConfig, setSelectedConfig] = useState(timerConfigs[0].id);
@@ -18,6 +18,7 @@ const ConfigToggle = ({ onConfigChange }) => {
       </label>
       <select
         id="config-select"
+        data-testid="config-select"
         value={selectedConfig}
         onChange={handleConfigChange}
         className="py-1 px-2 rounded border border-gray-300"
