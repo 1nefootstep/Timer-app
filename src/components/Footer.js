@@ -2,8 +2,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
-    return (
-    <div className="fixed bottom-4 right-4">
+  return (
+    <footer className="flex justify-center items-center pt-6 pb-2">
       <a
         href="https://github.com/1nefootstep/timer-app"
         target="_blank"
@@ -13,9 +13,8 @@ const Footer = () => {
         <FontAwesomeIcon icon={faGithub} size="lg" />
         <span>Github</span>
       </a>
-    </div>
-
-    );
+    </footer>
+  );
 };
 
 export default Footer;
